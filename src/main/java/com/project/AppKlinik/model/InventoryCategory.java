@@ -2,7 +2,6 @@ package com.project.AppKlinik.model;
 
 import javax.persistence.*;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.annotations.Type;

@@ -26,7 +26,4 @@ public class Category {
     private UUID id;
     private String description;
     private boolean type;
-    // @OneToMany(fetch = FetchType.EAGER)
-    // @JoinColumn(name="category_id", nullable = false)
-    // private List<InventoryCategory> InventoryCategories;
 }

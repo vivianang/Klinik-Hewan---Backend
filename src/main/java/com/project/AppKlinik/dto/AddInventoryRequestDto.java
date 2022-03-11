@@ -12,7 +12,6 @@ public class AddInventoryRequestDto {
     private UUID inventoryCategory;
     @NotNull
     private String inventoryName;
-    @NotNull
     private String brand;
     @NotNull
     private Double salesPrice;

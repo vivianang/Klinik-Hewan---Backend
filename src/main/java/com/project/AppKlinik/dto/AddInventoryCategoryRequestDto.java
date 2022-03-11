@@ -12,7 +12,6 @@ public class AddInventoryCategoryRequestDto {
     private UUID categories;
     @NotNull
     private String type;
-    @NotNull
     private String subType;
     @NotNull
     private Boolean isType;
