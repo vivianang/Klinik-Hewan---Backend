@@ -27,10 +27,10 @@ public class PetController {
     private PetService petService;
 
     @GetMapping
-    public List<Pet> getAllPet() {
-        return petService.getAllPet();
+    public List<Pet> getAllPet(@RequestParam UUID ownerId) {
+        return petService.getAllPet(ownerId);
     }
-
+    
     @PostMapping
     public Pet addPet(@RequestBody @Valid AddPetRequestDto requestDto) {
         return petService.addPet(requestDto);

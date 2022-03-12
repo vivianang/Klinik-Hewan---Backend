@@ -1,5 +1,6 @@
 package com.project.AppKlinik.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -24,8 +25,15 @@ public class PetService {
     @Autowired
     private SexService sexService;
 
-    public List<Pet> getAllPet() {
-        return petRepository.findAll();
+    public List<Pet> getAllPet(UUID ownerId) {
+        List<Pet> filterPetByOwner = new ArrayList<>();
+        for (int i = 0; i < petRepository.findAll().size(); i++) {
+            if (ownerId.equals(petRepository.findAll().get(i).getOwner().getId())) {
+                filterPetByOwner.add(petRepository.findAll().get(i));
+            }
+        }
+
+        return filterPetByOwner;
     }
 
     public Pet addPet(AddPetRequestDto requestDto) {
